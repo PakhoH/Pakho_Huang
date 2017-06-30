@@ -1,0 +1,158 @@
+body {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 0;
+    background: #397988;
+}
+
+
+/* 整个表单的属性和值 */
+
+.wrapper {
+    width: 710px;
+    height: 2716px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffffff;
+    border-radius: 25px;
+}
+
+
+/* 导航栏 */
+
+header {
+    width: 639px;
+    height: 82px;
+    font-size: 12px;
+    margin: 0 auto;
+}
+
+.div1 {
+    width: 50%;
+    height: 82px;
+    float: left;
+}
+
+.div2 {
+    width: 50%;
+    height: 82px;
+    float: left;
+    text-align: right;
+}
+
+.div3 {
+    text-align: right;
+    position: relative;
+    top: 70px;
+}
+
+
+/* 超链接的样式设置 */
+
+a:link {
+    text-decoration: none;
+    color: #009688
+}
+
+a:visited {
+    text-decoration: none;
+    color: #009688
+}
+
+a:hover {
+    text-decoration: underline;
+    font-size: 150%;
+    color: #ffc107
+}
+
+a:active {
+    text-decoration: underline;
+    color: #f43636
+}
+
+
+/* 主体部分 */
+
+.content {
+    width: 710px;
+    height: 2588px;
+}
+
+table {
+    width: 639px;
+    height: 2532px;
+    border: 1;
+    font-size: 12px;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.title1 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+th {
+    font-size: 13px;
+    line-height: 19.5px;
+    text-align: left;
+    font-weight: bold;
+    background: #eeeeee;
+}
+
+td {
+    line-height: 18px;
+    vertical-align: middle;
+}
+
+
+/* 主体部分的文字位置 */
+
+.left {
+    text-align: right;
+}
+
+.middle {
+    text-align: center;
+}
+
+.right {
+    text-align: left;
+}
+
+.button {
+    height: 80px;
+    text-align: center;
+}
+
+
+/* 页脚部分 */
+
+footer {
+    width: 710px;
+    height: 46px;
+    text-align: center;
+    font-size: 12px
+}
+
+
+/* 红色字体为关键部分 */
+
+.red {
+    color: #ff0000;
+}
+
+
+/* 蓝色字体为提示部分 */
+
+.blue {
+    color: #0000ff;
+}
+
+
+/* 灰色字体为页脚 */
+
+.gray {
+    color: #666666
+}

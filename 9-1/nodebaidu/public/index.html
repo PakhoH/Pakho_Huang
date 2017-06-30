@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>使用PHP开发手机版本的百度新闻</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <header class="cf">
+            <a href="#" class="logo"><span class="iconfont">&#xe7df;</span></a>
+            <a href="#" class="user"><span class="iconfont">&#xe61a;</span></a>
+            <a href="#" class="more"><span class="iconfont">&#xe64c;</span></a>
+            <a href="#" class="search"><span class="iconfont">&#xe644;</span></a>
+        </header>
+        <!-- header end -->
+        <!-- nav -->
+        <nav>
+            <ul>
+                <li><a href="#">推荐</a></li>
+                <li><a href="#">百家</a></li>
+                <li><a href="#">本地</a></li>
+                <li><a href="#">娱乐</a></li>
+                <li><a href="#">社会</a></li>
+                <li><a href="#">军事</a></li>
+                <li><a href="#">女人</a></li>
+                <li><a href="#">搞笑</a></li>
+                <li><a href="#">互联网</a></li>
+                <li><a href="#">科技</a></li>
+                <li><a href="#">生活</a></li>
+            </ul>
+        </nav>
+        <!-- nav end -->
+        <!-- article -->
+        <article class="news-main">
+            <ul class="news-lists"></ul>
+            <!-- 这里自动添加新闻 -->
+            <!--             <ul class="news-lists">
+                <li class="news-list">
+                    <div class="newsimg">
+                        <img src="images/01.JPEG">
+                    </div>
+                    <div class="newscontent">
+                        <h1>维生素E的内外美容方法 让肌肤美白有光泽</h1>
+                        <p><span class="newstime">13分钟前</span>
+                            <span class="newssrc">维生素</span></p>
+                    </div>
+                </li>
+                <li class="news-list">
+                    <div class="newsimg">
+                        <img src="images/02.jpg">
+                    </div>
+                    <div class="newscontent">
+                        <h1>深圳上班族注意：这次低学历可轻松考取深圳大学的本科文凭！</h1>
+                        <p><span class="newstime">广告</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="news-list">
+                    <div class="newsimg">
+                        <img src="images/03.JPEG">
+                    </div>
+                    <div class="newscontent">
+                        <h1>[实战案例]两次约会, 我把明知道我学PUA的大四学姐抱走了!</h1>
+                        <p><span class="newstime">5小时前</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="news-list">
+                    <div class="newsimg">
+                        <img src="images/04.JPEG">
+                    </div>
+                    <div class="newscontent">
+                        <h1>减肥偏方 最有效的减肥偏方 </h1>
+                        <p><span class="newstime">9小时前</span>
+                            <span class="newssrc">减肥瘦身</span></p>
+                    </div>
+                </li>
+                <li class="news-list">
+                    <div class="newsimg">
+                        <img src="images/05.JPEG">
+                    </div>
+                    <div class="newscontent">
+                        <h1>儿媳要改嫁, 要卖掉当年我给他们出钱买的房, 那是给留孙子的啊</h1>
+                        <p><span class="newstime">1天前</span>
+                            <span class="newssrc">婆媳关系</span></p>
+                    </div>
+                </li>
+                <li class="news-list">
+                    <div class="newsimg">
+                        <img src="images/06.JPEG">
+                    </div>
+                    <div class="newscontent">
+                        <h1>苹果肌和颧骨有什么区别</h1>
+                        <p><span class="newstime">1天前</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="news-list">
+                    <div class="newsimg">
+                        <img src="images/07.JPG">
+                    </div>
+                    <div class="newscontent">
+                        <h1>去除毛孔粗大 分享去除毛孔粗大的11个小窍门</h1>
+                        <p><span class="newstime">1天前</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="news-list">
+                    <div class="newsimg">
+                        <img src="images/08.JPEG">
+                    </div>
+                    <div class="newscontent">
+                        <h1>日本自卫队彻夜搜索失联战机 机上4人仍下落不明</h1>
+                        <p><span class="newstime">1天前</span>
+                            <span class="newssrc">战斗机</span></p>
+                    </div>
+                </li>
+            </ul> -->
+        </article>
+        <!-- article end -->
+    </div>
+    <!-- script -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+    $(document).ready(function() { //当链接字数大于2时，占据的宽度是其两倍；
+        var deviceWidth = $('body').width();
+        $('nav li').each(function(index, item) {
+            if ($(this).find('a').html().split('').length > 2) {
+                $(this).width(deviceWidth / 3);
+            } else {
+                $(this).width(deviceWidth / 6);
+            }
+        });
+    })
+    </script>
+    <script src="js/news.js"></script>
+    <!-- script end -->
+</body>
+
+</html>

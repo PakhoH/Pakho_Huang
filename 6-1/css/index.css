@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.cal {
+    width: 270px;
+    height: 400px;
+    margin: 100px auto 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: #524c3b;
+}
+
+.cal .title {
+    background-color: #888;
+    text-align: center;
+    width: 270px;
+    height: 40px;
+    line-height: 50px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.cal .main-board {
+    width: 270px;
+    height: 360px;
+    box-sizing: border-box;
+}
+
+.main-board .board-result {
+    width: 230px;
+    height: 60px;
+    box-sizing: border-box;
+    border: 1px solid #666;
+    margin: 10px auto;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.board-result .result-up {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 0;
+}
+
+.board-result .result-down {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 0;
+}
+
+.main-board .board-result input {
+    width: 200px;
+    height: 25px;
+    box-sizing: border-box;
+    border: 0;
+    margin-top: 4px;
+    margin-left: 10px;
+    outline: none;
+    color: #000;
+    text-align: right;
+}
+
+#output-result {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#output-process {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.main-board .board-keys {
+    width: 230px;
+    height: 270px;
+    margin: 30px auto 0;
+    overflow: hidden;
+}
+
+.board-keys .button {
+    width: 50px;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 0;
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: #53a553;
+    outline: none;
+    opacity: 0.5;
+}
+
+.board-keys .button:nth-child(4) {
+    margin-right: 0;
+}
+
+.board-keys .button:nth-child(8) {
+    margin-right: 0;
+}
+
+.board-keys .button:nth-child(12) {
+    margin-right: 0;
+}
+
+.board-keys .button:nth-child(16) {
+    margin-right: 0;
+}
+
+.board-keys .button:nth-child(20) {
+    margin-right: 0;
+}
+
+.board-keys .button:nth-child(23) {
+    margin-right: 0;
+}
+
+.board-keys .button:nth-child(21) {
+    width: 110px;
+}
+
+.board-keys .button:hover {
+    opacity: 1;
+    cursor: pointer;
+}

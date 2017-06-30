@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>hao123换肤功能-开发一个顶部带可选颜色换肤的hao123网站</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link id="skin" rel="stylesheet" type="text/css" href="css/css1.css">
+    <!-- 设置id，通过js的点击事件来改变css样式表 -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+        <!-- header -->
+            <div class="headerLogo">
+                <img src="images/richanglogo168_24.png">
+            </div>
+            <div class="headerInner">
+                <div class="innerLeft">
+                    <a href="#">4月26日</a>
+                    <a href="#">周三</a>
+                    <a href="#">三月三十</a>
+                    <a href="#">星座运势</a>
+                </div>
+                <div class="innerRight">
+                    <a href="#"><i></i>登录</a>
+                    <a href="#">网盘</a>
+                    <a href="#">邮箱</a>
+                    <a href="#">手机版</a>
+                    <a href="#">换肤</a>
+                </div>
+            </div>
+        </div>
+        <!-- header end -->
+        <!-- content -->
+        <div class="content">
+            <div class="search">
+                <div class="searchBox">
+                    <img src="images/searchlogo.dd56f38.png" alt="百度一下">
+                    <div class="form">
+                        <form action="https://www.baidu.com/s">
+                            <input class="search" type="text" name="word" autofocus="autofocus">
+                            <button class="btn" type="sumbit">百度一下</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="searchCon">
+                    <ul>
+                        <li><a href="#"><i></i></a></li>
+                        <li><a href="#">深圳天气</a></li>
+                        <li><a href="#">NBA</a></li>
+                        <li><a href="#">赵四出轨女粉丝</a></li>
+                        <li><a href="#">曝王菲谢霆锋分手</a></li>
+                        <li><a href="#">英达儿子被打</a></li>
+                        <li><a href="#">赵又廷吃辣条</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page">
+                <div class="pageTitle">
+                    <ul>
+                        <li><a href="#" class="titleFirst">首页</a></li>
+                        <li><a href="#">电视剧</a></li>
+                        <li><a href="#">最新电影</a></li>
+                        <li><a href="#">新闻头条</a></li>
+                        <li><a href="#">八卦娱乐</a></li>
+                        <li><a href="#">军事热点</a></li>
+                        <li><a href="#">热门游戏</a></li>
+                        <li><a href="#">小游戏</a></li>
+                        <li><a href="#">今日特价</a></li>
+                        <li><a href="#">特价旅游</a></li>
+                    </ul>
+                </div>
+                <div class="pageCon">
+                    <ul>
+                        <li><a href="#">百度贴吧</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">搜狐热点</a></li>
+                        <li><a href="#">腾 讯</a></li>
+                        <li><a href="#">网 易</a></li>
+                        <li><a href="#">优酷网</a></li>
+                        <li><a href="#">彩票</a></li>
+                        <li><a href="#">凤凰网</a></li>
+                        <li><a href="#">淘宝网</a></li>
+                        <li><a href="#">免费游戏</a></li>
+                        <li><a href="#">4399游戏</a></li>
+                        <li><a href="#">好123影视</a></li>
+                        <li><a href="#">京东商城</a></li>
+                        <li><a href="#">苏宁易购</a></li>
+                        <li><a href="#">今日特价</a></li>
+                        <li><a href="#">体育NBA</a></li>
+                        <li><a href="#">汽车之家</a></li>
+                        <li><a href="#">斗鱼TV</a></li>
+                        <li><a href="#">东方财富</a></li>
+                        <li><a href="#">58同城</a></li>
+                        <li><a href="#">房天下</a></li>
+                        <li><a href="#">携程旅行网</a></li>
+                        <li><a href="#">37游戏</a></li>
+                        <li><a href="#">12306旅游</a></li>
+                        <li><a href="#">百度地图</a></li>
+                        <li><a href="#">六间房直播</a></li>
+                        <li><a href="#">途牛旅游网</a></li>
+                        <li><a href="#">去哪儿</a></li>
+                        <li><a href="#">头条新闻</a></li>
+                        <li><a href="#">QQ邮箱</a></li>
+                        <li><a href="#">苏宁手机馆</a></li>
+                        <li><a href="#">哔哩哔哩</a></li>
+                        <li><a href="#">唯品会</a></li>
+                        <li><a href="#">亚马逊</a></li>
+                        <li><a href="#">天涯社区</a></li>
+                        <li><a href="#">微信网页版</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- content end -->
+        <!-- footer -->
+        <div class="footer">
+            <h5>点击下面按钮可切换主题:</h5>
+            <div>
+                <a href="#" onclick="changecss('css/css1.css')">默认</a>
+                <a href="#" onclick="changecss('css/css2.css')">蓝色</a>
+                <a href="#" onclick="changecss('css/css3.css')">橙色</a>
+                <a href="#" onclick="changecss('css/css4.css')">红色</a>
+            </div>
+        </div>
+        <!-- footer end -->
+    </div>
+    <script src="js/index.js"></script>
+    <!-- 引入JavaScript -->
+</body>
+
+</html>

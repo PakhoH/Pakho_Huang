@@ -1,0 +1,389 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-size: 12px;
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    position: relative;
+    min-width: 810px;
+    min-height: 600px;
+    height: 100%;
+}
+
+
+/*导航部分*/
+
+header {
+    overflow: hidden;
+}
+
+header nav {
+    margin: 19px 0 5px;
+    padding: 0 142px 0 0;
+    float: right;
+}
+
+header nav a {
+    margin-left: 20px;
+    color: #333;
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 13px;
+    float: left;
+}
+
+header nav a:hover {
+    color: #00c;
+}
+
+.denglu,
+.dropbtn1 {
+    font-weight: lighter;
+}
+
+
+/*设置的下拉菜单*/
+
+.setting {
+    position: absolute;
+    width: 27px;
+    height: 24px;
+    right: 95px;
+    display: inline-block;
+    text-align: center;
+}
+
+.setting a {
+    margin: 0;
+}
+
+.setting .setting-menu {
+    position: absolute;
+    top: 25px;
+    left: -16px;
+    width: 60px;
+    border: 1px solid #ddd;
+    z-index: 99;
+    display: none;
+}
+
+.setting:hover .setting-menu {
+    display: block;
+}
+
+.setting .setting-menu p {
+    display: inline-block;
+    width: 100%;
+    color: #333;
+    margin: 0;
+    line-height: 26px;
+}
+
+.setting .setting-menu p:hover {
+    color: #fff;
+    background-color: #3385ff;
+    cursor: pointer;
+}
+
+
+/*更多产品的下拉菜单*/
+
+.dropbtn2 {
+    background-color: #38f;
+    color: white;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    width: 60px;
+    font-weight: normal;
+}
+
+.more {
+    position: absolute;
+    display: inline-block;
+    width: 91px;
+    height: 24px;
+    right: 1px;
+    text-align: center;
+}
+
+.more-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 90px;
+    left: 5px;
+    top: 25px;
+    z-index: 99;
+}
+
+.more-menu a {
+    color: black;
+    padding: 6px 8px;
+    text-decoration: none;
+    display: block;
+}
+
+.more-menu a:hover {
+    background-color: #f1f1f1
+}
+
+.more:hover .more-menu {
+    display: block;
+}
+
+.u2:hover .dropbtn2 {
+    background-color: #ffffff;
+}
+
+
+/*主体部分*/
+
+.content {
+    position: relative;
+    text-align: center;
+    margin-top: 14px;
+}
+
+.input {
+    outline: none;
+}
+
+.content .search {
+    width: 539px;
+    height: 28px;
+    border: 1px solid #ddd;
+    border-right-width: 0;
+    padding: 2px 0 4px 0;
+    background-image: url(../images/camera_new_679c15cc.png);
+    background-repeat: no-repeat;
+    background-position: 97.7%;
+    border-style: solid;
+    border-color: #ccc;
+    border-width: thin;
+    text-indent: 7px;
+    outline: none;
+}
+
+.content .search:hover {
+    border-color: #999 transparent #b3b3b3 #999;
+}
+
+.content .search:focus {
+    border-color: #4791ff transparent #4791ff #4791ff;
+}
+
+.content .btn {
+    width: 100px;
+    height: 36px;
+    margin: -5px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border: 1px solid #2d78f4;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.content .btn:hover {
+    background-color: #3171f3;
+}
+
+.form {
+    margin: 22px auto 0;
+}
+
+
+/*底部*/
+
+.qrcodeCon {
+    text-align: center;
+    position: absolute;
+    bottom: 140px;
+    height: 60px;
+    width: 100%;
+}
+
+#ftCon {
+    height: 50px;
+    position: absolute;
+    bottom: 57px;
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.qrcodeCon b {
+    color: #666;
+    font-weight: bold;
+}
+
+.qrcode {
+    display: inline-block;
+    height: 86px;
+}
+
+.qrcode-img {
+    width: 60px;
+    height: 60px;
+}
+
+.qrcode-text {
+    color: #999;
+    line-height: 23px;
+    margin: 3px 0 0 0;
+}
+
+.qrcode-text p {
+    margin: 0;
+    padding: 0
+}
+
+.ftCon-wrapper p {
+    text-align: center;
+    color: #999;
+    margin: 0;
+    padding: 0;
+}
+
+.ftCon-wrapper p a {
+    color: #999;
+}
+
+.ftCon-wrapper {
+    margin-top: 12px;
+}
+
+#p1 a {
+    margin-left: 20px;
+}
+
+#a1 {
+    margin-left: 19px;
+}
+
+.icon1 {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    top: 3px;
+    background-image: url(../images/icons_1.png);
+}
+
+.icon2 {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    top: 3px;
+    right: 4px;
+    background-image: url(../images/icons_2.png);
+}
+
+
+/*兼容性处理*/
+
+
+/*for  Firefox */
+
+@-moz-document url-prefix() {
+    .denglu,
+    .dropbtn1 {
+        font-weight: normal;
+    }
+    .con-wrapper {
+        margin-top: -11px;
+    }
+    .content .form {
+        margin-left: -5px;
+        margin-top: 21px;
+    }
+    .content .btn {
+        margin-left: -4px;
+        margin-top: -6px;
+    }
+    .content .search {
+        background-position: 97.9%;
+    }
+    #p1 {
+        margin-bottom: 2px;
+        margin-right: 22px;
+        margin-top: -2px;
+    }
+    #p1 a {
+        margin-left: 22px;
+    }
+    #p2 {
+        margin-left: 4px;
+    }
+}
+
+
+/*for  Safari(Chrome) */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .content .form {
+        margin-right: 5px;
+    }
+    #p1 {
+        margin-bottom: 3px;
+        margin-right: 21px;
+    }
+    #p1 a {
+        margin-left: 22px;
+    }
+    #p2 {
+        margin-left: 4px;
+    }
+}
+
+
+/*for IE浏览器 */
+
+
+/*用root选择器区分IE8和IE9*/
+
+.con-wrapper {
+    margin-top: -24px\9;
+}
+
+.content .form {
+    margin-left: -6px\9;
+    margin-top: 17px\9;
+}
+
+:root .content .form {
+    margin-top: 22px\9\0;
+}
+
+#p1 {
+    margin-bottom: 2px\9;
+    margin-right: 20px\9;
+}
+
+#p1 a {
+    margin-left: 22px\9;
+}
+
+#p2 {
+    margin-top: 3px\9;
+    margin-left: 5px\9;
+}
+
+.content .btn {
+    margin-top: 5px\9;
+}
+
+:root .content .btn {
+    margin-top: -5px\9\0;
+}

@@ -1,0 +1,20 @@
+table caption {
+    font-size: 25px
+}
+
+table {
+    text-align: center;
+    width: 500px;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+table th {
+    height: 50px;
+    border: 1px solid #000;
+}
+
+table td {
+    height: 35px;
+    border: 1px solid #000;
+}

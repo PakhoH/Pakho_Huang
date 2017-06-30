@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>响应式的百度首页</title>
+    <link rel="stylesheet" type="text/css" href="css/pc-index.css" media="screen and (min-width:768px)">
+    <link rel="stylesheet" type="text/css" href="css/mobile-index.css" media="screen and (max-width:767px)">
+    <style type="text/css">
+    @media screen and (min-width: 768px) {
+        /*PC端显示，移动端隐藏*/
+        .pc-wrapper {
+            display: block;
+        }
+        .mobile-wrapper {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-width: 767px) {
+        /*移动端显示，PC端隐藏*/
+        .pc-wrapper {
+            display: none;
+        }
+        .mobile-wrapper {
+            display: block;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 这里是pc端的内容 -->
+    <div class="pc-wrapper">
+        <!-- pc-header -->
+        <header>
+            <nav><a href="https://www.nuomi.com/?cid=002540">糯米</a>
+                <a href="http://news.baidu.com/">新闻</a>
+                <a href="https://www.hao123.com/">hao123</a>
+                <a href="http://map.baidu.com/">地图</a>
+                <a href="http://v.baidu.com/">视频</a>
+                <a href="https://tieba.baidu.com/index.html">贴吧</a>
+                <a class="denglu" href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F">登录</a>
+                <div class="setting"><a class="dropbtn1" href="https://www.baidu.com/gaoji/advanced.html">设置</a>
+                    <div class="setting-menu">
+                        <p>搜索设置</p>
+                        <p>高级搜索</p>
+                        <p>关闭预测</p>
+                        <p>搜索历史</p>
+                    </div>
+                </div>
+                <div class="more"><a class="dropbtn2" href="http://www.baidu.com/more/">更多产品</a>
+                    <div class="more-menu"><a href="http://music.baidu.com/">音乐</a>
+                        <a href="http://image.baidu.com/">图片</a>
+                        <a href="https://zhidao.baidu.com/">知道</a>
+                        <a href="http://wenku.baidu.com/">文库</a>
+                        <a href="http://top.baidu.com/">风云榜</a>
+                        <a href="https://www.baidu.com/more/">全部产品</a></div>
+                </div>
+            </nav>
+        </header>
+        <!-- pc-header end-->
+        <!-- pc-content -->
+        <div class="content">
+            <div class="con-wrapper">
+                <img src="images/bd_logo1.png" alt="百度一下" width="270px" height="129px">
+                <div class="form">
+                    <form action="https://www.baidu.com/s">
+                        <input class="search" type="text" name="word" autofocus="autofocus">
+                        <button class="btn" type="sumbit">百度一下</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- pc-content end-->
+        <!-- pc-footer -->
+        <footer>
+            <div class="qrcodeCon">
+                <div class="qrcode">
+                    <div class="qrcode-img">
+                        <img src="images/zbios_a4b2d86f.png"></div>
+                    <div class="qrcode-text">
+                        <p><b>手机百度</b></p>
+                    </div>
+                </div>
+            </div>
+            <div id="ftCon">
+                <div class="ftCon-wrapper">
+                    <p id="p1">
+                        <a href="https://www.baidu.com/cache/sethelp/help.html" target="_blank">把百度设为主页</a>
+                        <a href="http://home.baidu.com/">关于百度</a>
+                        <a href="http://ir.baidu.com/phoenix.zhtml?c=188488&p=irol-irhome">About&nbsp;&nbsp;Baidu</a>
+                        <a href="http://e.baidu.com/?refer=888&subsite=gd">百度推广</a>
+                    </p>
+                    <p> ©2017 Baidu
+                        <a href="https://www.baidu.com/duty/">使用百度前必读</a>
+                        <a href="http://help.baidu.com/">意见反馈</a> 京ICP证030173号
+                        <span class="icon1"></span>
+                        <a id="a1" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" target="_blank">京公网安备11000002000001号</a>
+                        <span class="icon2"></span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- pc-footer end-->
+    </div>
+    <!-- pc端的内容 end-->
+    <!-- 这里是移动端的内容 -->
+    <div class="mobile-wrapper">
+        <!-- wap-header -->
+        <header class="wap-header">
+            <div class="wap-userinfo">
+                <div class="wap-weather">
+                    <div class="icon-weather"></div>
+                    <div class="num-weather">26°</div>
+                    <div class="status-weather">
+                        <p>深圳</p>
+                        <p>46&nbsp;优</p>
+                    </div>
+                    <i class="icon-down"></i>
+                </div>
+                <div class="wap-login">
+                    <a class="icon-login" href="http://m.baidu.com/usrprofile?action=home&model=user&ori=index"></a>
+                </div>
+            </div>
+            <div class="wap-logo">
+                <img src="images/plus_logo.png" alt="百度一下，你就知道">
+            </div>
+            <div class="wap-search">
+                <form class="wap-form" action="https://www.baidu.com/s">
+                    <input class="wap-input" type="text" name="word" autofocus="autofocus" maxlength="64">
+                    <div class="callicon-wrap">
+                        <div class="baiduapp-icon"></div>
+                    </div>
+                    <div class="se-inner">
+                        <button class="wap-btn" type="sumbit">百度一下</button>
+                    </div>
+                </form>
+            </div>
+            <div class="wap-nav">
+                <div class="nav-info">
+                    <a class="nav-attention" href="https://mbd.baidu.com/webpage?action=icard&type=subscribe&channel=wise_home">
+                        <i class="nav-icon"></i>
+                        <span class="nav-text">关注</span>
+                    </a>
+                    <a class="nav-news" href="https://m.news.baidu.com/news?fr=mohome&ssid=0&from=&uid=&pu=sz%40224_220%2Cta%40iphone___3_537&bd_page_type=1#/?_k=amd8iv">
+                        <i class="nav-icon"></i>
+                        <span class="nav-text">新闻</span>
+                    </a>
+                    <a class="nav-novel" href="http://dushu.m.baidu.com/">
+                        <i class="nav-icon"></i>
+                        <span class="nav-text">小说</span>
+                    </a>
+                    <a class="nav-video" href="https://sv.baidu.com/#/?_k=2r0fbo">
+                        <i class="nav-icon"></i>
+                        <span class="nav-text">视频</span>
+                    </a>
+                    <a class="nav-nuomi" href="https://m.nuomi.com/?cid=wise_shouye_nuomi">
+                        <i class="nav-icon"></i>
+                        <span class="nav-text">糯米</span>
+                    </a>
+                    <a class="nav-map" href="http://map.baidu.com/mobile/webapp/index/index/?itj=45&wtj=wi&ssid=0&from=&uid=&pu=sz%40224_220%2Cta%40iphone___3_537&bd_page_type=1&showcvr=1">
+                        <i class="nav-icon"></i>
+                        <span class="nav-text">地图</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- wap-header end -->
+        <!-- wap-content -->
+        <div class="wap-content">
+            <div class="news-item">
+                <a class="inner-item" href="http://wap.baidu.com/#iact=wiseindex%2Ftabs%2Fnews%2Factivity%2Fnewsdetail%3D%257B%2522linkData%2522%253A%257B%2522name%2522%253A%2522iframe%252Fmib-iframe%2522%252C%2522id%2522%253A%2522feed%2522%252C%2522index%2522%253A0%252C%2522url%2522%253A%2522http%253A%252F%252Fwap.baidu.com%252Ffeed%252Fdata%252Flandingpage%253Fs_type%253Dnews%2526nid%253D7477640814487124056%2526n_type%253D0%2526p_from%253D2%2522%252C%2522title%2522%253A%2522%25E6%2590%259C%25E7%258B%2590%25E8%25B4%25A2%25E7%25BB%258F%2522%257D%257D">
+                    <div class="text-content">
+                        <h2>什么叫工作到位？9张图，拿走不谢！</h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap">
+                            <img src="images/u=1865571333,4230747824&fm=170&s=00F2CC32818E64E81055C0D3030030B3&w=218&h=146&img.JPEG">
+                        </div>
+                        <div class="img-wrap">
+                            <img src="images/u=1579255429,2959945011&fm=170&s=A992CD1041CEFCE946E45DC60300C0B2&w=218&h=146&img.JPEG">
+                        </div>
+                        <div class="img-wrap">
+                            <img src="images/u=2234152759,1813076878&fm=170&s=E902CC1A01CEC4E848EC24DB030080B2&w=218&h=146&img.JPEG">
+                        </div>
+                    </div>
+                    <div class="news-from">
+                        <span class="src-net">搜狐财经</span>
+                        <span class="src-time">12:14</span>
+                    </div>
+                </a>
+            </div>
+            <div class="news-item">
+                <a class="inner-item" href="http://wap.baidu.com/#iact=wiseindex%2Ftabs%2Fnews%2Factivity%2Fnewsdetail%3D%257B%2522linkData%2522%253A%257B%2522name%2522%253A%2522iframe%252Fmib-iframe%2522%252C%2522id%2522%253A%2522feed%2522%252C%2522index%2522%253A0%252C%2522url%2522%253A%2522http%253A%252F%252Fwap.baidu.com%252Ffeed%252Fdata%252Flandingpage%253Fs_type%253Dnews%2526nid%253D3866079358839183432%2526n_type%253D1%2526p_from%253D2%2522%252C%2522title%2522%253A%2522%25E7%259C%258B%25E7%2588%2586%25E7%25AC%2591%25E5%258A%25A8%25E6%25BC%25AB%2522%257D%257D">
+                    <div class="text-content">
+                        <h2>《海贼王》现“麒麟臂”，跟路飞的三档抗衡，将来要破卡普铁拳、凯多铁棒？</h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap">
+                            <img src="images/u=3211342726,2056963106&fm=170&s=A843DA14507A3D96C69A42840300308A&w=218&h=146&img.PNG">
+                        </div>
+                        <div class="img-wrap">
+                            <img src="images/u=3582231352,2961672462&fm=170&s=C99127D752445D51FEBDB32D03006057&w=218&h=146&img.PNG">
+                        </div>
+                        <div class="img-wrap">
+                            <img src="images/u=2867944278,2340769785&fm=170&s=5F818B451663611756A50CFA03007016&w=218&h=146&img.PNG">
+                        </div>
+                    </div>
+                    <div class="news-from">
+                        <span class="src-net">看爆笑动漫</span>
+                        <span class="src-time">04-02</span>
+                    </div>
+                </a>
+            </div>
+            <div class="news-item">
+                <a class="inner-item" href="http://wap.baidu.com/#iact=wiseindex%2Ftabs%2Fnews%2Factivity%2Fnewsdetail%3D%257B%2522linkData%2522%253A%257B%2522name%2522%253A%2522iframe%252Fmib-iframe%2522%252C%2522id%2522%253A%2522feed%2522%252C%2522index%2522%253A0%252C%2522url%2522%253A%2522http%253A%252F%252Fwap.baidu.com%252Ffeed%252Fdata%252Fimageland%253Fs_type%253Dpicnews%2526nid%253D2781172277620404827%2526n_type%253D1%2526p_from%253D2%2522%252C%2522title%2522%253A%2522%25E6%25AF%258F%25E6%2597%25A5%25E5%258A%25A8%25E6%25BC%25AB%25E7%25B2%25BE%25E9%2580%2589%2522%257D%257D">
+                    <div class="text-content">
+                        <h2>动漫中那些让人分不清性别的角色</h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap">
+                            <img src="images/u=629868185,3527397897&fm=170&s=D6107E8403C145510C48757A0300F070&w=218&h=146&img.PNG">
+                        </div>
+                        <div class="img-wrap">
+                            <img src="images/u=2468865127,3817337484&fm=170&s=2C9873D8ACA9F41FCB2C251A0300E0D2&w=218&h=146&img.PNG">
+                        </div>
+                        <div class="img-wrap">
+                            <img src="images/u=2675951646,210656809&fm=170&s=D92BB355461375D2581DDD6A0300F031&w=218&h=146&img.PNG">
+                        </div>
+                    </div>
+                    <div class="news-from">
+                        <span class="src-net">每日动漫精选</span>
+                        <span class="src-time">15:03</span>
+                        <span class="src-icon-rec">图集</span>
+                    </div>
+                </a>
+            </div>
+            <div class="news-item">
+                <a class="inner-item" href="http://wap.baidu.com/#iact=wiseindex%2Ftabs%2Fnews%2Factivity%2Fnewsdetail%3D%257B%2522linkData%2522%253A%257B%2522name%2522%253A%2522iframe%252Fmib-iframe%2522%252C%2522id%2522%253A%2522feed%2522%252C%2522index%2522%253A0%252C%2522url%2522%253A%2522http%253A%252F%252Fwap.baidu.com%252Ffeed%252Fdata%252Flandingpage%253Fs_type%253Dnews%2526nid%253D7600096545292219621%2526n_type%253D0%2526p_from%253D2%2522%252C%2522title%2522%253A%2522%25E5%2585%25A8%25E7%25BD%2591%25E8%25B5%2584%25E8%25AE%25AF%2522%257D%257D">
+                    <div class="text-content">
+                        <h2>韩国没钱举办冬奥会求助日本 遭日网友抵制: 丢人现眼!</h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap">
+                            <img src="images/u=3033439300,474239441&fm=170&s=CD84871817424CEB05F8F4C3030080B0&w=218&h=146&img.JPEG">
+                        </div>
+                        <div class="img-wrap">
+                            <img src="images/u=1092629755,2336655727&fm=170&s=32B0358B58714288A6E5F5F403005021&w=218&h=146&img.JPEG">
+                        </div>
+                        <div class="img-wrap">
+                            <img src="images/u=1655508176,3247790354&fm=170&s=2BA0088B48930BF1423535DA0300C004&w=218&h=146&img.JPEG">
+                        </div>
+                    </div>
+                    <div class="news-from">
+                        <span class="src-net">全网资讯</span>
+                        <span class="src-time">10:18</span>
+                        <span class="src-icon-rec">推荐</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- wap-content end -->
+        <!-- wap-footer -->
+        <footer class="wap-footer">
+            <ul class="qrm28">
+                <li class="hotIcon"><a href="https://itunes.apple.com/cn/app/bai-du-liu-lan-qi-2yi-yong/id789634484?l=en&mt=8">百度推广，让有需求的客户找到你</a></li>
+                <li class="baiduIcon"><a href="https://boxer.baidu.com/scheme?scheme=baiduboxapp%3A%2F%2Fapppage%3Faction%3DopenPage%26params%3D%257B%2522pageid%2522%253A%2522homepage%2522%257D%26needlog%3D1%26logargs%3D%257B%2522source%2522%253A%2522wise_index_wenzilian%2522%252C%2522from%2522%253A%2522openbox%2522%252C%2522page%2522%253A%2522safari%2522%252C%2522type%2522%253A%2522%2522%252C%2522value%2522%253A%2522%2522%252C%2522channel%2522%253A%25221002024w%2522%252C%2522extlog%2522%253A%2522%2522%257D">手机百度， 6亿用户的极速搜索应用</a></li>
+                <li class="hotIcon"><a href="http://e.baidu.com/?subsite=gd">百度推广，让有需求的客户找到你</a></li>
+            </ul>
+            <div class="bottom">
+                <div><a href="http://ufosdk.baidu.com/?m=Client&a=commonsubmit&appid=517&activityId=1&needEmail=false&bw=9D702F9ECDFA3A12BCA82AB283BC153B&kw=&tn=iphone&pageid=6"><i class="icon-feedback"></i>用户反馈</a></div>
+                <a class="index-copyright" href="https://www.baidu.com/duty/wise/wise_index.html">使用百度前必读 Baidu 京ICP证030173号</a>
+                <a class="recordcode" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" target="_blank"><i></i>京公网安备11000002000001号</a>
+            </div>
+        </footer>
+        <!-- wap-footer end -->
+    </div>
+    <!-- 移动端的内容 end-->
+</body>
+
+</html>

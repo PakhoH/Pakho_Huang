@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>学生成绩等级查询</title>
+</head>
+
+<body>
+    <div>
+        <h1>学生成绩等级查询</h1>
+        <p>请输入你的成绩分数：</p>
+        <input id="score">
+        <!-- 給按钮一个点击事件，引用script -->
+        <button type="button" onclick="myScore()">查询</button>
+        <p id="grade" style="color:#ff0000;"></p>
+    </div>
+
+    <script>
+    function myScore() {
+        //设置变量x，将id="score"的值赋值给x;
+        var x = document.getElementById("score").value;
+        //设置变量y，将id="grade"的值赋值给y;
+        var y = document.getElementById("grade");
+        //switch语句进行判定；
+        switch (true) {
+            //case x 为真时，在html页面输出对应的y值;
+            case x > 90 && x <= 100:
+                y.innerHTML = "1等生";
+                break;
+            case x > 80 && x <= 90:
+                y.innerHTML = "2等生";
+                break;
+            case x > 70 && x <= 80:
+                y.innerHTML = "3等生";
+                break;
+            case x > 60 && x <= 70:
+                y.innerHTML = "4等生";
+                break;
+            case x > 50 && x <= 60:
+                y.innerHTML = "5等生";
+                break;
+            case x > 40 && x <= 50:
+                y.innerHTML = "6等生";
+                break;
+            case x > 30 && x <= 40:
+                y.innerHTML = "7等生";
+                break;
+            case x > 20 && x <= 30:
+                y.innerHTML = "8等生";
+                break;
+            case x > 10 && x <= 20:
+                y.innerHTML = "9等生";
+                break;
+            case x > 0 && x <= 10||x=="0":
+                y.innerHTML = "10等生";
+                break;
+            //case x 为否时，在html页面输出y值为"请输入100分制的分数";
+            default:
+                y.innerHTML = "请输入100分制的分数";
+        }
+    }
+    </script>
+</body>
+
+</html>

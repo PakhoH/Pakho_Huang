@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*用绝对定位的方法居中*/
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+}
+
+
+/*十字架的上方部分*/
+
+.s1 {
+    width: 100px;
+    height: 100px;
+    background-color: #fbaf24;
+    margin: 0 auto;
+    box-shadow: 5px -5px 25px 2px #868a81;
+}
+
+
+/*十字架的中间部分*/
+
+.s6 {
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.s2 {
+    width: 100px;
+    height: 100px;
+    background-color: #3ea558;
+    float: left;
+    box-shadow: 5px -5px 25px 2px #868a81;
+}
+
+.s3 {
+    width: 100px;
+    height: 100px;
+    background-color: #ff00ff;
+    float: left;
+    box-shadow: 5 0 10px 2px #bbb;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+.s4 {
+    width: 100px;
+    height: 100px;
+    background-color: #7527b0;
+    float: left;
+    box-shadow: 5px -5px 25px 2px #868a81;
+}
+
+
+/*十字架的下面部分*/
+
+.s5 {
+    width: 100px;
+    height: 100px;
+    background-color: #f44336;
+    margin: 0 auto;
+    box-shadow: 5px -5px 25px 2px #868a81;
+}
+
+
+/*中间图片的大小，用-webkit-box方法居中*/
+
+.s3 img {
+    width: 30px;
+    height: 30px;
+}

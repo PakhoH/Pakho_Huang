@@ -1,0 +1,78 @@
+body,
+div,
+h1,
+h3 {
+    margin: 0;
+    padding: 0
+}
+
+.container {
+    text-align: center;
+}
+
+.container h1 {
+    padding: 15px 0;
+}
+
+.container .article,
+.container .footer {
+    text-align: left;
+}
+
+.container h3 {
+    background-color: #4c5590;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px 0;
+    position: relative;
+}
+
+h3 .jiantou {
+    background: url(../images/01.png) 0 0 no-repeat;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    right: 20px;
+}
+
+.article_info {
+    display: none;
+}
+
+.article .section {
+    margin-bottom: 20px;
+}
+
+.section .question {
+    color: #32a937;
+    background-color: #efeffd;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.section .answer {
+    color: #666666;
+    font-size: 14px;
+    padding: 0 40px;
+}
+
+strong {
+    color: #333;
+}
+
+.footer span {
+    display: inline-block;
+    margin: 10px 0 80px 0;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #666666;
+    font-weight: bolder;
+}
+
+.footer a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #666666;
+}

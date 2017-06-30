@@ -1,0 +1,131 @@
+body,
+div,
+header,
+footer,
+h2,
+ol,
+ul,
+li,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul,
+dl {
+    list-style: none;
+}
+
+.container-fluid {
+    background: #8a6b47;
+}
+
+
+/*header*/
+
+.guide {
+    background: #d11313;
+    color: #fff;
+    padding-bottom: 40px;
+}
+
+.guide h1,
+.guide dd {
+    opacity: 0.5;
+}
+
+.guide h1:hover {
+    opacity: 1;
+    cursor: pointer;
+    font-size: 42px;
+}
+
+.guide dd:hover {
+    opacity: 1;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 120%;
+}
+
+
+/*header end*/
+
+
+/*content*/
+
+.content {
+    background: #8a6b47;
+    color: #fff;
+}
+
+.content h2 {
+    padding-top: 30px;
+}
+
+.content h4 {
+    padding-top: 30px;
+}
+
+.content h4,
+.content span,
+.content ul,
+.content dl {
+    opacity: 0.5;
+}
+
+.content h4:hover {
+    opacity: 1;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.content span:hover {
+    opacity: 1;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 120%;
+}
+
+.content ul:hover {
+    opacity: 1;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 120%;
+}
+
+.content dl:hover {
+    opacity: 1;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 120%;
+}
+
+.content .html-summary,
+.content .css-summary {
+    padding-bottom: 40px;
+}
+
+
+/*content end*/
+
+
+/*bottom*/
+
+.bottom {
+    background: #2d320f;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    text-align: left;
+}
+
+.bottom ul span {
+    color: #fff;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+
+/*bottom end*/

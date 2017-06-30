@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.Wrapper {
+    position: relative;
+    min-width: 810px;
+    min-height: 600px;
+    height: 100%;
+}
+
+
+/*标准盒模型和怪异盒模型的对比*/
+
+.wrapper {
+    display: -webkit-flex;
+    line-height: 100px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+/*标准盒模型*/
+
+.s1-box {
+    width: 100px;
+    height: 100px;
+    background-color: #808080;
+    text-align: center;
+}
+
+.standard {
+    margin: 0 auto;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: 5px solid red;
+}
+
+
+/*怪异盒模型*/
+
+.g1-box {
+    width: 100px;
+    height: 100px;
+    background-color: #795548;
+    text-align: center;
+}
+
+.guaiyi {
+    margin: 0 auto;
+    padding: 10px;
+    width: 130px;
+    height: 130px;
+    background-color: aqua;
+    border: 5px solid red;
+    box-sizing: border-box;
+}
+
+
+/*弹性盒子水平分栏，垂直分栏，排序(flex)*/
+
+.wrapper1 {
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+}
+
+
+/*水平分栏*/
+
+.wrapper2 {
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    width: 300px;
+    height: 300px;
+    background-color: #808080;
+    margin: 5px;
+}
+
+.first {
+    height: 50px;
+    background-color: orange;
+    -webkit-flex: 1;
+}
+
+.second {
+    height: 50px;
+    background-color: aquamarine;
+    -webkit-flex: 1;
+}
+
+.three {
+    height: 80px;
+    background-color: #e3ff7f;
+    -webkit-flex: 1;
+}
+
+
+/*垂直分栏*/
+
+.wrapper3 {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    width: 300px;
+    height: 300px;
+    background-color: #808080;
+    margin: 5px;
+}
+
+.four {
+    height: 50px;
+    background-color: orange;
+    -webkit-flex: 1;
+}
+
+.five {
+    height: 50px;
+    background-color: aquamarine;
+    -webkit-flex: 1;
+}
+
+.six {
+    height: 80px;
+    background-color: #e3ff7f;
+    -webkit-flex: 1;
+}
+
+
+/*排序(flex)*/
+
+.wrapper4 {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    width: 300px;
+    height: 300px;
+    background-color: #808080;
+    margin: 5px;
+}
+
+.seven {
+    height: 50px;
+    background-color: orange;
+    -webkit-flex: 1;
+    -webkit-order: 2;
+}
+
+.eight {
+    height: 50px;
+    background-color: aquamarine;
+    -webkit-flex: 1;
+    -webkit-order: 3;
+}
+
+.nine {
+    height: 80px;
+    background-color: #e3ff7f;
+    -webkit-flex: 1;
+    -webkit-order: 1;
+}
+
+
+/*cloumn分栏*/
+
+.wrapper5 {
+    -webkit-column-count: 4;
+    -webkit-column-rule-style: dashed;
+    background-color: #d6f9fd;
+}
+
+
+/*旧版弹性盒子居中布局*/
+
+.wrapper6 {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    background-color: #f99090;
+    height: 200px;
+}
+
+.wrapper7 {
+    width: 100px;
+    height: 100px;
+    background-color: #4caf50;
+}

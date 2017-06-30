@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>总结高级前端开发工程师面试题和思维脑图</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>高级前端面试题</h1>
+        <div class="article">
+            <h3>一、理论知识<i class="jiantou"></i></h3>
+            <div class="article_info">
+                <div class="section">
+                    <div class="question">1.1、前端 MV*框架的意义</div>
+                    <div class="answer">
+                        早期前端都是比较简单，基本以页面为工作单元，内容以浏览型为主，也偶尔有简单的表单操作，基本不太需要框架。
+                        <br>随着 AJAX 的出现，Web2.0的兴起，人们可以在页面上可以做比较复杂的事情了，然后前端框架才真正出现了。
+                        <br>如果是页面型产品，多数确实不太需要它，因为页面中的 JavaScript代码，处理交互的绝对远远超过处理模型的，但是如果是应用软件类产品，这就太需要了。
+                        <br>长期做某个行业软件的公司，一般都会沉淀下来一些业务组件，主要体现在数据模型、业务规则和业务流程，这些组件基本都存在于后端，在前端很少有相应的组织。
+                        <br>从协作关系上讲，很多前端开发团队每个成员的职责不是很清晰，有了前端的 MV框架，这个状况会大有改观。
+                        <br>之所以感受不到MV*框架的重要性，是因为Model部分代码较少，View的相对多一些。如果主要在操作View和Controller，那当然 jQuery 这类库比较好用了。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">1.2、请简述盒模型</div>
+                    <div class="answer">
+                        IE6盒子模型与W3C盒子模型。
+                        <br>文档中的每个元素被描绘为矩形盒子。盒子有四个边界：外边距边界margin, 边框边界border, 内边距边界padding与内容边界content。
+                        <br>CSS3中有个box-sizing属性可以控制盒子的计算方式，
+                        <br>content-box：padding和border不被包含在定义的width和height之内。对象的实际宽度等于设置的width值和border、padding之和。（W3C盒子模型）
+                        <br>border-box：padding和border被包含在定义的width和height之内。对象的实际宽度就等于设置的width值。（IE6盒子模型）</div>
+                </div>
+                <div class="section">
+                    <div class="question">1.3、线程与进程的区别</div>
+                    <div class="answer">
+                        a. 一个程序至少有一个进程，一个进程至少有一个线程
+                        <br>b. 线程的划分尺度小于进程，使得多线程程序的并发性高
+                        <br>c. 进程在执行过程中拥有独立的内存单元，而多个线程共享内存，从而极大地提高了程序的运行效率
+                        <br>d. 每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口。但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制
+                        <br>e. 多线程的意义在于一个应用程序中，有多个执行部分可以同时执行。但操作系统并没有将多个线程看做多个独立的应用，来实现进程的调度和管理以及资源分配
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">1.4、HTML5 存储类型有什么区别</div>
+                    <div class="answer">
+                        HTML5 能够本地存储数据，在之前都是使用 cookies 使用的。HTML5提供了下面两种本地存储方案：
+                        <br>①.localStorage 用于持久化的本地存储，数据永远不会过期，关闭浏览器也不会丢失;
+                        <br>②.sessionStorage 同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">1.5、什么叫优雅降级和渐进增强</div>
+                    <div class="answer">
+                        <strong>渐进增强</strong> progressive enhancement：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。
+                        <br><strong>优雅降级</strong> graceful degradation：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。两者的区别：
+                        <br>a. 优雅降级是从复杂的现状开始，并试图减少用户体验的供给
+                        <br>b. 渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要
+                        <br>c. 降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">1.6、WEB应用从服务器主动推送Data到客户端有那些方式？</div>
+                    <div class="answer">
+                        a. html5 websoket
+                        <br>b. WebSocket 通过 Flash
+                        <br>c. XHR长时间连接
+                        <br>d. XHR Multipart Streaming
+                        <br>e. 不可见的Iframe
+                        <br>f. "
+                        < "script">"标签的长时间连接(可跨域)
+                    </div>
+                    <div class="section">
+                        <div class="question">1.7、Flash、Ajax各自的优缺点，在使用中如何取舍？</div>
+                        <div class="answer">
+                            <strong>Flash</strong>： a. Flash适合处理多媒体、矢量图形、访问机器
+                            <br>b. 对CSS、处理文本上不足，不容易被搜索
+                            <br><strong>Ajax</strong>： a. Ajax对CSS、文本支持很好，支持搜索
+                            <br>b. 多媒体、矢量图形、机器访问不足
+                            <br><strong>共同点</strong>： a. 与服务器的无刷新传递消息
+                            <br>b. 可以检测用户离线和在线状态
+                            <br>c. 操作DOM
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="question">1.8、AMD和CMD 规范的区别？</div>
+                        <div class="answer">
+                            AMD 提前执行依赖 - 尽早执行，requireJS 是它的实现
+                            <br>CMD 按需执行依赖 - 懒执行，seaJS 是它的实现
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="question">1.9、网站重构的理解</div>
+                        <div class="answer">
+                            重构：在不改变外部行为的前提下，简化结构、添加可读性，而在网站前端保持一致的行为。
+                            <br>a. 使网站前端兼容于现代浏览器(针对于不合规范的CSS、如对IE6有效的)
+                            <br>b. 对于移动平台的优化，针对于SEO进行优化
+                            <br>c. 减少代码间的耦合，让代码保持弹性
+                            <br>d. 压缩或合并JS、CSS、image等前端资源</div>
+                    </div>
+                    <div class="section">
+                        <div class="question">1.10、浏览器的内核分别是什么?</div>
+                        <div class="answer">
+                            IE浏览器的内核Trident、Mozilla的Gecko、Chrome的Blink（WebKit的分支）、Opera内核原为Presto，现为Blink；
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="question">1.11、前端页面有哪三层构成，分别是什么？作用是什么？</div>
+                        <div class="answer">
+                            a. 结构层：由 HTML 或 XHTML 之类的标记语言负责创建，仅负责语义的表达。解决了页面“内容是什么”的问题。
+                            <br>b. 表示层：由CSS负责创建，解决了页面“如何显示内容”的问题。
+                            <br>c. 行为层：由脚本负责。解决了页面上“内容应该如何对事件作出反应”的问题。
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="question">1.12、知道的网页制作会用到的图片格式有哪些？</div>
+                        <div class="answer">
+                            png-8，png-24，jpeg，gif，svg
+                            <br>Webp：谷歌（google）开发的一种旨在加快图片加载速度的图片格式。图片压缩体积大约只有JPEG的2/3，并能节省大量的服务器带宽资源和数据空间。Facebook Ebay等知名网站已经开始测试并使用WebP格式。
+                            <br>Apng：全称是“Animated Portable Network Graphics”, 是PNG的位图动画扩展，可以实现png格式的动态图片效果。04年诞生，但一直得不到各大浏览器厂商的支持，直到日前得到 iOS safari 8的支持，有望代替GIF成为下一代动态图标准。
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="question">1.13、在制作一个Web应用或Web站点的过程中，你是如何考虑他的UI、安全性、高性能、SEO、可维护性以及技术因素的？</div>
+                        <div class="answer">
+                            UI：界面美观，要有个性，考虑用户使用的逻辑要简单，用起来舒适自由。使用习惯要符合大部分用户的习惯，比如少让用户输入，采用选择的方式，提供搜索和提示功能
+                            <br> 安全性：对输入进行有效性验证（非法字符，特殊字符）如PHP中的方法htmlspecialchars()将特殊字符（>）转化为html实体，trim()去掉用户输入的不必要字符，stripslashes()去掉用户输入的反斜杠等等。 对交互操作进行身份验证和授权（api-key,authtoken）,异常错误处理（向用户反馈单额错误提示不要让攻击者分析出一些网络环境和配置），内存溢出，注入攻击等。
+                            <br> 高性能：
+                            <br> DNS负载均衡
+                            <br> HTTP重定向（通过使客户端重定向，来分散和转移请求压力，比如一些下载服务通常都有几个镜像服务器）
+                            <br> 分布式缓存
+                            <br> 负载均衡：反向代理负载均衡,
+                            <br> 数据库扩展：读写分离，垂直分区，水平分区。
+                            <br> SEO:选好关键字，描述语言，修饰性图片换成文本，合理使用h1-h6，对图片添加alt属性，链接添加target属性。
+                            <br> 可维护性：代码是否容易被理解，是否容易被修改和增加新的功能，当出现问题时是否能快速定位到问题代码。
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="question">1.14、什么是MVC？</div>
+                        <div class="answer">
+                            MVC由Model（模型）, view（视图）和Controller（控制器）组成。
+                            <br>Model：数据信息存取层。
+                            <br>View：view层负责将应用的数据以特定的方式展现在界面上。
+                            <br>Controller：通常控制器负责从视图读取数据，控制用户输入，并向模型发送数据。
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="question">1.15、优化MYSQL数据库的方法？</div>
+                        <div class="answer">
+                            ①.选取最适用的字段属性,尽可能减少定义字段长度,尽量把字段设置NOT NULL,例如’省份,性别’,最好设置为ENUM；
+                            <br>②.使用连接（JOIN）来代替子查询；
+                            <br>③.使用联合(UNION)来代替手动创建的临时表；
+                            <br>④.锁定表,优化事务处理；
+                            <br>⑤.使用外键,优化锁定表；
+                            <br>⑥.优化查询语句。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="article">
+            <h3>二、HTML<i class="jiantou"></i></h3>
+            <div class="article_info">
+                <div class="section">
+                    <div class="question">2.1、Doctype作用? 严格模式与混杂模式-如何触发这两种模式，区分它们有何意义?</div>
+                    <div class="answer">
+                        （1） 声明位于文档中的最前面，处于标签之前。告知浏览器的解析器，用什么文档类型 规范来解析这个文档。
+                        <br>（2）严格模式的排版和 JS 运作模式是 以该浏览器支持的最高标准运行。
+                        <br>（3）在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。
+                        <br>（4）DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">2.2、HTML与XHTML——二者有什么区别</div>
+                    <div class="answer">
+                        a. XHTML 元素必须被正确地嵌套。
+                        <br>b. XHTML 元素必须被关闭。
+                        <br>c. 标签名必须用小写字母。
+                        <br>d. XHTML 文档必须拥有根元素。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">2.3、iframe的优缺点？</div>
+                    <div class="answer"><strong>优点</strong>：
+                        <br>a. 解决加载缓慢的第三方内容如图标和广告等的加载问题
+                        <br>b. iframe无刷新文件上传
+                        <br>c. iframe跨域通信
+                        <br><strong>缺点</strong>：
+                        <br>a. iframe会阻塞主页面的Onload事件
+                        <br>b. 无法被一些搜索引擎索引到
+                        <br>c. 影响浏览器中的并行资源下载，iframe和父页面不能共享下载
+                        <br>d. script脚本标签写在了iframe之前，iframe中的资源会被阻塞</div>
+                </div>
+                <div class="section">
+                    <div class="question">2.4、Quirks模式是什么？它和Standards模式有什么区别？</div>
+                    <div class="answer">
+                        在写程序时我们也会经常遇到这样的问题，如何保证原来的接口不变，又提供更强大的功能，尤其是新功能不兼容旧功能时。IE6以前的页面大家都不会去写DTD，所以IE6就假定 如果写了DTD，就意味着这个页面将采用对CSS支持更好的布局，而如果没有，则采用兼容之前的布局方式。这就是Quirks模式（怪癖模式，诡异模式，怪异模式）。
+                        <br><strong>区别</strong>：总体会有布局、样式解析和脚本执行三个方面的区别。
+                        <br>a. 盒模型：在W3C标准中，如果设置一个元素的宽度和高度，指的是元素内容的宽度和高度，而在Quirks 模式下，IE的宽度和高度还包含了padding和border。
+                        <br>b. 设置行内元素的高宽：在Standards模式下，给'
+                        < 'span'>'等行内元素设置wdith和height都不会生效，而在quirks模式下，则会生效。
+                            <br>c. 设置百分比的高度：在standards模式下，一个元素的高度是由其包含的内容来决定的，如果父元素没有设置百分比的高度，子元素设置一个百分比的高度是无效的用
+                            <br>d. 设置水平居中：使用margin:0 auto在standards模式下可以使元素水平居中，但在quirks模式下却会失效。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">2.5、请阐述table的缺点</div>
+                    <div class="answer">
+                        <br>a. 太深的嵌套，比如table>tr>td>h3，会导致搜索引擎读取困难，而且，最直接的损失就是大大增加了冗余代码量。
+                        <br>b. 灵活性差，比如要将tr设置border等属性，是不行的，得通过td
+                        <br>c. 代码臃肿，当在table中套用table的时候，阅读代码会显得异常混乱
+                        <br>d. 混乱的colspan与rowspan，用来布局时，频繁使用他们会造成整个文档顺序混乱。
+                        <br>e. table需要多次计算才能确定好其在渲染树中节点的属性，通常要花3倍于同等元素的时间。
+                        <br>f. 不够语义
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">2.6、简述一下src与href的区别</div>
+                    <div class="answer">
+                        src用于替换当前元素；href用于在当前文档和引用资源之间确立联系。
+                        <br>src是source的缩写，指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置
+                        <br>href是Hypertext Reference的缩写，指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="article">
+            <h3>三、CSS<i class="jiantou"></i></h3>
+            <div class="article_info">
+                <div class="section">
+                    <div class="question">3.1、CSS中 link 和@import 的区别是什么？</div>
+                    <div class="answer">
+                        a. link属于HTML标签，而@import是CSS提供的，且只能加载 CSS
+                        <br>b. 页面被加载时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载
+                        <br>c. import只在IE5以上才能识别，而link是HTML标签，无兼容问题
+                        <br>d. link方式的样式的权重 高于@import的权重
+                        <br>e. 当使用 Javascript 控制 DOM 去改变样式的时候，只能使用 link 方式，因为 @import 眼里只有 CSS ，不是 DOM 可以控制
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">3.2、CSS伪类与CSS伪对象的区别</div>
+                    <div class="answer">
+                        CSS 引入伪类和伪元素的概念是为了描述一些现有CSS无法描述的东西
+                        <br>根本区别在于：它们是否创造了新的元素（抽象）
+                        <br>伪类：一开始用来表示一些元素的动态状态，随后CSS2标准扩展了其概念范围，使其成为了所有逻辑上存在但在文档树中却无须标识的“幽灵”分类
+                        <br>伪对象：代表了某个元素的子元素，这个子元素虽然在逻辑上存在，但却并不实际存在于文档树中
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">3.3、请简述CSS的权重规则</div>
+                    <div class="answer">
+                        一个行内样式+1000，一个id+100，一个属性选择器/class类/伪类选择器+10，一个元素名/伪对象选择器+1。
+                        <br>关系选择器将拆分为两个选择器再计算。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">3.4、解释下 CSS sprites原理，优缺点</div>
+                    <div class="answer">
+                        CSS Sprites其实就是把网页中一些背景图片整合到一张图片文件中， 再利用CSS的“background-image”，“background- repeat”，“background-position”的组合进行背景定位， background-position可以用数字精确的定位出背景图片的位置。
+                        <br><strong>优点</strong>：
+                        <br>a. 减少网页的http请求
+                        <br>b. 减少图片的字节
+                        <br>c. 解决了网页设计师在图片命名上的困扰，只需对一张集合的图片上命名就可以了，不需要对每一个小元素进行命名
+                        <br>d. 更换风格方便，只需要在一张或少张图片上修改图片的颜色或样式，整个网页的风格就可以改变。
+                        <br><strong>缺点</strong>：
+                        <br>a. 在宽屏，高分辨率的屏幕下的自适应页面，你的图片如果不够宽，很容易出现背景断裂
+                        <br>b. CSS Sprites在开发的时候，要通过photoshop或其他工具测量计算每一个背景单元的精确位置
+                        <br>c. 在维护的时候比较麻烦，如果页面背景有少许改动，一般就要改这张合并的图片
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">3.5、经常遇到的浏览器兼容性有哪些？如何解决？</div>
+                    <div class="answer">
+                        a. 浏览器默认的margin和padding不同
+                        <br>b. IE6双边距bug
+                        <br>c. 在ie6，ie7中元素高度超出自己设置高度。原因是IE8以前的浏览器中会给元素设置默认的行高的高度导致的
+                        <br>d. min-height在IE6下不起作用
+                        <br>e. 透明性IE用filter:Alpha(Opacity=60)，而其他主流浏览器用 opacity:0.6
+                        <br>f. input边框问题，去掉input边框一般用border:none;就可以，但由于IE6在解析input样式时的BUG(优先级问题)，在IE6下无效
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">3.6、什么是外边距重叠？重叠的结果是什么？</div>
+                    <div class="answer">
+                        外边距重叠就是margin-collapse。
+                        <br>在CSS当中，相邻的两个盒子（可能是兄弟关系也可能是祖先关系）的外边距可以结合成一个单独的外边距。这种合并外边距的方式被称为折叠，并且因而所结合成的外边距称为折叠外边距。
+                        <br>折叠结果遵循下列计算规则：
+                        <br>a. 两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值。
+                        <br>b. 两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。
+                        <br>c. 两个外边距一正一负时，折叠结果是两者的相加的和。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">3.7、css属性content有什么作用？有什么应用？</div>
+                    <div class="answer">
+                        css的content属性专门应用在 before/after 伪元素上，用于来插入生成内容。
+                        <br>可以配合自定义字体显示特殊符号。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">3.8、行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</div>
+                    <div class="answer">
+                        （1）CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，比如div默认display属性值为“block”，成为“块级”元素；span默认display属性值为“inline”，是“行内”元素。
+                        <br>（2）行内元素有：a b span img input select strong（强调的语气） 块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p
+                        <br>（3）知名的空元素： br hr img input link meta
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="article">
+            <h3>四、JavaScript<i class="jiantou"></i></h3>
+            <div class="article_info">
+                <div class="section">
+                    <div class="question">4.1、请解释一下什么是闭包</div>
+                    <div class="answer">
+                        当函数可以记住并访问所在的作用域时，就产生了闭包，即使函数是在当前作用域之外执行。闭包有如下特性：
+                        <br>a. JavaScript允许你使用在当前函数以外定义的变量
+                        <br>b. 即使外部函数已经返回，当前函数仍然可以引用在外部函数所定义的变量
+                        <br>c. 闭包可以更新外部变量的值
+                        <br>d. 用闭包模拟私有方法
+                        <br>由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题。
+                        <br>在定时器、事件监听器、Ajax请求、跨窗口通信、Web Workers或者任何其他的异步（或者同步）任务中，只要使用了回调函数，实际上就是在使用闭包！
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">4.2、call 和 apply 的区别是什么？</div>
+                    <div class="answer">
+                        call 和 apply 就是为了改变函数体内部 this 的指向。
+                        <br>区别是从第二个参数起，call 需要把参数按顺序传递进去，而 apply 则是把参数放在数组里。
+                        <br>当参数明确时用call与apply都行, 当参数不明确时可用apply给合arguments
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">4.3、jQuery中 $(′.class′)和$('div.class') 哪个效率更高？</div>
+                    <div class="answer">
+                        jQuery内部使用Sizzle引擎，处理各种选择器。Sizzle引擎的选择顺序是从右到左，所以这条语句是先选.class，
+                        <br>第二个会直接过滤出div标签，而第一个就不会过滤了，将所有相关标签都列出。</div>
+                </div>
+                <div class="section">
+                    <div class="question">4.4、JS如何实现面向对象和继承机制？</div>
+                    <div class="answer">
+                        <strong>创建对象方法</strong>：
+                        <br>a. 利用json创建对象
+                        <br>b. 使用JavaScript中的Object类型
+                        <br>c. 通过创建函数来生成对象
+                        <br><strong>继承机制</strong>：
+                        <br>a. 构造函数绑定，使用call或apply方法，将父对象的构造函数绑定在子对象上
+                        <br>b. prototype模式，继承new函数的模式
+                        <br>c. 直接继承函数的prototype属性，对b的一种改进
+                        <br>d. 利用空对象作为中介
+                        <br>e. 在ECMAScript5中定义了一个新方法Object.create()，用于创建一个新方法
+                        <br>f. 拷贝继承，把父对象的所有属性和方法，拷贝进子对象，实现继承。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">4.5、对this指针的理解，可以列举几种使用情况？</div>
+                    <div class="answer">
+                        this实际上是在函数被调用时发生的绑定，它指向什么完全取决于函数在哪里被调用。
+                        <br>this指的是：调用函数的那个对象。
+                        <br>a. 纯粹的函数调用，属于全局性调用，因此this就代表全局对象Global。
+                        <br>b. 作为对象方法的调用，这时this就指这个上级对象。
+                        <br>c. 作为构造函数调用，就是通过这个函数new一个新对象（object）。这时，this就指这个新对象。
+                        <br>d. apply与call的调用，它们的作用是改变函数的调用对象，它的第一个参数就表示改变后的调用这个函数的对象。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">4.6、Ajax有哪些好处和弊端？</div>
+                    <div class="answer">
+                        <strong>优点</strong>：
+                        <br>a. 无刷新更新数据
+                        <br>b. 异步与服务器通信
+                        <br>c. 前端和后端负载平衡
+                        <br>d. 基于标准被广泛支持
+                        <br>e. 界面与应用分离
+                        <br><strong>缺点</strong>：
+                        <br>a. AJAX干掉了Back和History功能，即对浏览器机制的破坏
+                        <br>b. AJAX的安全问题
+                        <br>c. 对搜索引擎支持较弱
+                        <br>d. 违背URL和资源定位的初衷
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">4.7、null和undefined的区别？</div>
+                    <div class="answer">
+                        <strong>null</strong>：
+                        <br>a. null是一个表示"无"的对象，转为数值时为0
+                        <br>b. null表示"没有对象"，即该处不应该有值。
+                        <br><strong>undefined</strong>：
+                        <br>a. undefined是一个表示"无"的原始值，转为数值时为NaN。
+                        <br>b. undefined表示"缺少值"，就是此处应该有一个值，但是还没有定义。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">4.8、new操作符具体干了什么呢?</div>
+                    <div class="answer">
+                        a. 一个新对象被创建。它继承自函数原型
+                        <br>b. 构造函数被执行。执行的时候，相应的传参会被传入
+                        <br>c. 上下文(this)会被指定为这个新实例
+                        <br>d. 如果构造函数返回了一个“对象”，那么这个对象会取代整个new出来的结果
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">4.9、如何解决跨域问题?</div>
+                    <div class="answer">
+                        a. JSONP（JSON with Padding），填充式JSON
+                        <br>b. iframe跨域
+                        <br>c. HTML5的window.postMessage方法跨域
+                        <br>d. 通过设置img的src属性，进行跨域请求
+                        <br>e. 跨域资源共享（CORS），服务器设置Access-Control-Allow-OriginHTTP响应头之后，浏览器将会允许跨域请求
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">4.10、哪些操作会造成内存泄漏？</div>
+                    <div class="answer">
+                        a. 当页面中元素被移除或替换时，若元素绑定的事件仍没被移除，在IE中不会作出恰当处理，此时要先手工移除事件，不然会存在内存泄露。
+                        <br>b. 在IE中，如果循环引用中的任何对象是 DOM 节点或者 ActiveX 对象，垃圾收集系统则不会处理。
+                        <br>c. 闭包可以维持函数内局部变量，使其得不到释放。
+                        <br>d. 在销毁对象的时候，要遍历属性中属性，依次删除，否则会泄漏。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">4.11、请说说在JavaScript引用类型和值类型的理解</div>
+                    <div class="answer">
+                        值类型：存储在栈（stack）中的简单数据段，也就是说，它们的值直接存储在变量访问的位置。即Undefined、Null、Boolean、Number 和 String。
+                        <br>引用类型：存储在堆（heap）中的对象，也就是说，存储在变量处的值是一个指针（point），指向存储对象的内存处。即对象、数组
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">4.12、JavaScript原型，原型链 ? 有什么特点？</div>
+                    <div class="answer">
+                        * 原型对象也是普通的对象，是对象一个自带隐式的 __proto__ 属性，原型也有可能有自己的原型，如果一个原型对象的原型不为null的话，我们就称之为原型链。
+                        <br> * 原型链是由一些用来继承和共享属性的对象组成的（有限的）对象链。
+                        <br> * JavaScript的数据对象有那些属性值？
+                        <br> 　　writable：这个属性的值是否可以改。
+                        <br> 　　configurable：这个属性的配置是否可以删除，修改。
+                        <br> 　　enumerable：这个属性是否能在for…in循环中遍历出来或在Object.keys中列举出来。
+                        <br> 　　value：属性值。
+                        <br> * 当我们需要一个属性的时，Javascript引擎会先看当前对象中是否有这个属性， 如果没有的话，就会查找他的Prototype对象是否有这个属性。
+                        <br> function clone(proto) {
+                        <br> 　　function Dummy() { }
+                        <br> 　　Dummy.prototype = proto;
+                        <br> 　　Dummy.prototype.constructor = Dummy;
+                        <br> 　　return new Dummy(); //等价于Object.create(Person);
+                        <br> }
+                        <br> function object(old) {
+                        <br> function F() {};
+                        <br> F.prototype = old;
+                        <br> return new F();
+                        <br> }
+                        <br> var newObj = object(oldObject);
+                        <br>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">4.13、说几条写JavaScript的基本规范？</div>
+                    <div class="answer">
+                        (1)不要在同一行声明多个变量
+                        <br>(2)请使用 ===/!==来比较true/false或者数值
+                        <br>(3)使用对象字面量替代new Array这种形式
+                        <br>(4)不要使用全局函数。
+                        <br>(5)Switch语句必须带有default分支
+                        <br>(6)函数不应该有时候有返回值，有时候没有返回值。
+                        <br>(7)For循环必须使用大括号
+                        <br>(8)If语句必须使用大括号
+                        <br>(9)for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">4.14、如何判断当前脚本运行在浏览器还是node环境中？</div>
+                    <div class="answer">
+                        通过判断Global对象是否为window，如果不为window，当前脚本没有运行在浏览器中
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">4.15、JSON的优缺点？</div>
+                    <div class="answer">
+                        JSON的优点：
+                        <br>A.数据格式比较简单，易于读写，格式都是压缩的，占用带宽小；
+                        <br>B.易于解析，客户端JavaScript可以简单的通过eval_r()进行JSON数据的读取；
+                        <br>C.支持多种语言，包括ActionScript, C, C#, ColdFusion, Java, JavaScript, Perl, PHP，Python, Ruby等服务器端语言，便于服务器端的解析；
+                        <br>D.在PHP世界，已经有PHP-JSON和JSON-PHP出现了，偏于PHP序列化后的程序直接调用，PHP服务器的对象、数组等能直接生成JSON格式，便于客户端的访问提取；
+                        <br>E.因为JSON格式能直接为服务器端代码使用，大大简化了服务器端和客户端的代码开发量，且完成任务不变，并且易于维护。AJAX = Asynchronous JavaScript and XML（异步的 JavaScript和XML）。AJAX是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。
+                        <br>JSON的缺点：
+                        <br>A.没有XML格式这么推广的深入人心和喜用广泛，没有XML那么通用性；
+                        <br>B.JSON格式目前在Web Service中推广还属于初级阶段。
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="article">
+            <h3>五、网络与优化<i class="jiantou"></i></h3>
+            <div class="article_info">
+                <div class="section">
+                    <div class="question">5.1、讲讲输入完网址按下回车，到看到网页这个过程中发生了什么</div>
+                    <div class="answer">
+                        a. 域名解析
+                        <br>b. 发起TCP的3次握手
+                        <br>c. 建立TCP连接后发起http请求
+                        <br>d. 服务器端响应http请求，浏览器得到html代码
+                        <br>e. 浏览器解析html代码，并请求html代码中的资源
+                        <br>f. 浏览器对页面进行渲染呈现给用户</div>
+                </div>
+                <div class="section">
+                    <div class="question">5.2、谈谈你对前端性能优化的理解</div>
+                    <div class="answer">
+                        a. <strong>请求优化</strong>： 合并JS和CSS，减少DNS查找次数，避免重定向，使用GET完成AJAX请求，减小请求中的Cookie，缓存资源，使用CDN，开启GZip，压缩HTML页面，开启长连接，避免行内脚本阻塞并行下载，少用iframe（阻塞onload事件，影响并行下载）。
+                        <br>b. <strong>CSS优化</strong>： 样式表置于页面顶部，避免使用CSS表达式，使用外部JS和CSS，压缩JS和CSS，避免滤镜。
+                        <br>c. <strong>JavaScript优化</strong>： 脚本置于页面底部，减少DOM访问，减少重绘和重排，尽量使用局部变量，使用定时器分割大型任务，用合适的正则操作字符串，惰性模式减少分支，事件委托，第三方代码异步加载，节流与去抖动，使用localStorage替代cookie。
+                        <br>d. <strong>图片优化</strong>： 内联图使用Data:URL，压缩图片或使用WebP格式，固定图片尺寸，图片预加载，图片延迟加载，使用字体矢量图标，Sprites图片。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">5.3、一次js请求一般情况下有哪些地方会有缓存处理？</div>
+                    <div class="answer">
+                        a. 浏览器端存储
+                        <br>b. 浏览器端文件缓存
+                        <br>c. HTTP缓存304
+                        <br>d. 服务器端文件类型缓存
+                        <br>e. 表现层&DOM缓存
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">5.4、一个页面上有大量的图片（大型电商网站），加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验。</div>
+                    <div class="answer">
+                        a. 图片懒加载，滚动到相应位置才加载图片。
+                        <br>b. 图片预加载，如果为幻灯片、相册等，将当前展示图片的前一张和后一张优先下载。
+                        <br>c. 使用CSSsprite，SVGsprite，Iconfont、Base64等技术，如果图片为css图片的话。
+                        <br>d. 如果图片过大，可以使用特殊编码的图片，加载时会先加载一张压缩的特别厉害的缩略图，以提高用户体验。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">5.5、TCP与UDP的区别</div>
+                    <div class="answer">
+                        a. UDP 协议的头长度不到TCP头的一半，所以同样大小的包里UDP携带的净数据比TCP包多。
+                        <br>b. TCP会发响应，UDP不会。并且UDP没有Seq和Ack等概念，省去了建立连接的开销，DNS解析就使用UDP协议。TCP有3次握手4次挥手。
+                        <br>c. UDP不能分割报文段（MSS），超过MTU的时候，发送方的网络层负责分片，接收方收到分片后再组装起来，这个过程会消耗资源，降低性能。
+                        <br>d. UDP没有重传机制，丢包的时候就不能按需发送。TCP有超时重传、快速重传和SACK。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">5.6、23条Web性能优化最佳实践和规则</div>
+                    <div class="answer">
+                        1.尽可能减少HTTP请求次数
+                        <br/> 2.使用CDN
+                        <br/> 3.避免使用src和href标签
+                        <br/> 4.加入Expires或Cache-Control Header
+                        <br/> 5.使用Gzip压缩
+                        <br/> 6.在html文件顶部放置样式表
+                        <br/> 7.在html文件底部放置Javascript脚本
+                        <br/> 8.避免使用CSS表达式
+                        <br/> 9.使用外部Javascript和CSS外部文件
+                        <br/> 10.减少使用DNS查找次数
+                        <br/> 11.精简Javascript和CSS
+                        <br/> 12.避免重定向
+                        <br/> 13.移除重复的脚本
+                        <br/> 14.配置ETag
+                        <br/> 15.缓存AJAX
+                        <br/> 16.使用GET完成AJAX请求
+                        <br/> 17.减少DOM元素数量
+                        <br/> 18.避免404
+                        <br/> 19.减少Cookie大小
+                        <br/> 20.使用无Cookie的域
+                        <br/> 21.避免使用滤镜
+                        <br/> 22.不要在HTML中缩放图片
+                        <br/> 23.使用小favicon.ico文件，并让其可缓存
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">5.7请尽可能完整得描述下从输入URL到整个网页加载完毕及显示在屏幕上的整个流程</div>
+                    <div class="answer">
+                        1）把URL分割成几个部分：协议、网络地址、资源路径。其中网络地址指示该连接网络上哪一台计算机，可以是域名或者IP地址，可以包括端口号；协议是从该计算机获取资源的方式，常见的是HTTP、FTP，不同协议有不同的通讯内容格式；资源路径指示从服务器上获取哪一项资源。 例如：http://www.guokr.com/question/554991/ 协议部分：http 网络地址：www.guokr.com 资源路径：/question/554991/
+                        <br/> 2）如果地址不是一个IP地址，通过DNS（域名系统）将该地址解析成IP地址。IP地址对应着网络上一台计算机，DNS服务器本身也有IP，你的网络设置包含DNS服务器的IP。 例如：www.guokr.com 不是一个IP，向DNS询问请求www.guokr.com 对应的IP，获得IP： 111.13.57.142。这个过程里，你的电脑直接询问的DNS服务器可能没有www.guokr.com 对应的IP，就会向它的上级服务器询问，上级服务器同样可能没有，就依此一层层向上找，最高可达根节点，找到或者全部找不到为止。
+                        <br/> 3）如果地址不包含端口号，根据协议的默认端口号确定一个。端口号之于计算机就像窗口号之于银行，一家银行有多个窗口，每个窗口都有个号码，不同窗口可以负责不同的服务。端口只是一个逻辑概念，和计算机硬件没有关系。 例如：www.guokr.com 不包含端口号，http协议默认端口号是80。如果你输入的url是http://www.guokr.com:8080/ ，那表示不使用默认的端口号，而使用指定的端口号8080。
+                        <br/> 4）向2和3确定的IP和端口号发起网络连接。 例如：向111.13.57.142的80端口发起连接
+                        <br/> 5）根据http协议要求，组织一个请求的数据包，里面包含大量请求信息，包括请求的资源路径、你的身份 例如：用自然语言来表达这个数据包，大概就是：请求 /question/554991/ ，我的身份是xxxxxxx。
+                        <br/> 6）服务器响应请求，将数据返回给浏览器。数据可能是根据HTML协议组织的网页，里面包含页面的布局、文字。数据也可能是图片、脚本程序等。现在你可以用浏览器的“查看源代码”功能，感受一下服务器返回的是什么东东。如果资源路径指示的资源不存在，服务器就会返回著名的404错误。
+                        <br/> 7）如果（6）返回的是一个页面，根据页面里一些外链的URL，例如图片的地址，按照（1）－（6）再次获取。
+                        <br/> 8）开始根据资源的类型，将资源组织成屏幕上显示的图像，这个过程叫渲染，网页渲染是浏览器最复杂、最核心的功能。
+                        <br/> 9）将渲染好的页面图像显示出来，并开始响应用户的操作。 以上只是最基本的步骤，实际不可能就这么简单，一些可选的步骤例如网页缓存、连接池、加载策略、加密解密、代理中转等等都没有提及。即使基本步骤本身也有很复杂的子步骤，TCP/IP、DNS、HTTP、HTML：每一个都可以展开成庞大的课题，而浏览器的基础——操作系统、编译器、硬件等更是一个比一个复杂。不是计算机专业的同学看了上面的解释完全不明白是很正常的，可能会问为什么要搞得那么复杂，但我保证这每一个步骤都经过深思熟虑和时间的考验。你输入URL即可浏览互联网，而计算机系统在背后做了无数你看不到的工作，计算机各个子领域无数工程师为此付出你难以想象的努力。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">5.8、对于大流量的网站,您采用什么样的方法来解决访问量问题?</div>
+                    <div class="answer">
+                        确认服务器硬件是否足够支持当前的流量,数据库读写分离,优化数据表,程序功能规则,禁止外部的盗链,控制大文件的下载,使用不同主机分流主要流量。
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="question">5.9、谈谈以前端角度出发做好SEO需要考虑什么？</div>
+                    <div class="answer">
+                        ①.了解搜索引擎如何抓取网页和如何索引网页；
+                        <br>②.Meta标签优化；
+                        <br>③.如何选取关键词并在网页中放置关键词；
+                        <br>④.了解主要的搜索引擎；
+                        <br>⑤.主要的互联网目录；
+                        <br>⑥.按点击付费的搜索引擎；
+                        <br>⑦.搜索引擎登录；
+                        <br>⑧.链接交换和链接广泛度；
+                        <br>⑨.标签的合理使用。
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h3>备注<i class="jiantou"></h3>
+            <div class="article_info">
+                <span>主要参考文档：</span><a href="http://www.cnblogs.com/strick/p/4968200.html">《前端面试题目搜集》</a>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

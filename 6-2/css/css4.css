@@ -1,0 +1,8 @@
+body {background: #751616;}
+.header a,
+.searchCon li a,
+.page .pageCon li a,
+.page .pageTitle li a,
+.footer h5 {
+    color: #fff;
+}

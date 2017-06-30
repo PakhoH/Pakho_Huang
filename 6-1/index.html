@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>开发完整计算器</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="cal">
+            <div class="title">
+                <!-- 计算器名称 -->
+                <h3>孵客计划班专用计算器</h3>
+            </div>
+            <div class="main-board">
+                <!-- 计算器主面板 -->
+                <div class="board-result" id="board-result">
+                    <!-- 屏显区 -->
+                    <div class="result-up" id="result-up">
+                        <!-- 输出计算结果 -->
+                        <input type="text" class="output-result" id="output-result">
+                    </div>
+                    <div class="result-down" id="result-down">
+                        <!-- 输出计算过程 -->
+                        <input type="text" class="output-process" id="output-process">
+                    </div>
+                </div>
+                <div class="board-keys" id="board-keys">
+                    <!-- 按钮区 -->
+                    <input type="button" class="button" value="&larr;" id="btnBackspace" onclick="back()">
+                    <input type="button" class="button" value="C" id="btnClear" onclick="btnClear()">
+                    <input type="button" class="button" value="&radic;" id="btnSqrt" onclick="sqrt()">
+                    <input type="button" class="button" value="%" id="btnRemainder" onclick="remainder()">
+                    <input type="button" class="button" value="Sin" id="btnSin" onclick="sin()">
+                    <input type="button" class="button" value="Cos" id="btnCos" onclick="cos()">
+                    <input type="button" class="button" value="Tan" id="btnTan" onclick="tan()">
+                    <input type="button" class="button" value="÷" id="btnDivide" onclick="divide()">
+                    <input type="button" class="button" value="7" id="btnSeven" onclick="num(7)">
+                    <input type="button" class="button" value="8" id="btnEight" onclick="num(8)">
+                    <input type="button" class="button" value="9" id="btnNine" onclick="num(9)">
+                    <input type="button" class="button" value="×" id="btnTimes" onclick="times()">
+                    <input type="button" class="button" value="4" id="btnFour" onclick="num(4)">
+                    <input type="button" class="button" value="5" id="btnFive" onclick="num(5)">
+                    <input type="button" class="button" value="6" id="btnSix" onclick="num(6)">
+                    <input type="button" class="button" value="-" id="btnReduce" onclick="reduce()">
+                    <input type="button" class="button" value="1" id="btnOne" onclick="num(1)">
+                    <input type="button" class="button" value="2" id="btnTwo" onclick="num(2)">
+                    <input type="button" class="button" value="3" id="btnThree" onclick="num(3)">
+                    <input type="button" class="button" value="+" id="btnPlus" onclick="plus()">
+                    <input type="button" class="button" value="0" id="btnZero" onclick="num(0)">
+                    <input type="button" class="button" value="." id="btnPoint" onclick="point()">
+                    <input type="button" class="button" value="=" id="btnEqual" onclick="equal()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <!-- 引入JavaScript;实现计算器的功能 -->
+</body>
+
+</html>
